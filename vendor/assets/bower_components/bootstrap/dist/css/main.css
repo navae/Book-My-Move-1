@@ -1,0 +1,403 @@
+
+
+/*--------------------------------------------------------------------------
++	Main Menu Style
+--------------------------------------------------------------------------*/
+#map-canvas { 
+  height: 370px;
+  margin-top: 40px;
+  margin-right: 20px;
+  border:2px solid;
+  border-color: #66AFE9;
+ }
+.mainmenu li.logo-wrapper a {
+    border-right: 1px solid #E8E8E8;
+    padding-left: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.mainmenu-wrapper {
+  background-color: #FFF;
+  border-bottom: 4px solid #009688;
+  z-index: 4;
+}
+.mainmenu {
+  width: 100%;
+  /* general ul style */
+  /* first level ul style */
+  /* sub-menu */
+}
+.mainmenu ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.mainmenu > ul,
+.mainmenu .mainmenu-submenu-inner {
+  margin: 0 auto;
+}
+.mainmenu > ul > li,
+.mainmenu .mainmenu-submenu-inner > li {
+  display: inline-block;
+  *display: inline;
+}
+.mainmenu > ul > li > a,
+.mainmenu .mainmenu-submenu-inner > li > a {
+  font-size: 1.2em;
+  padding: 1.2em 1.5em;
+  color: #999;
+  display: inline-block;
+  text-decoration: none;
+}
+.mainmenu > ul > li > a:hover,
+.mainmenu .mainmenu-submenu-inner > li > a:hover {
+  color: #4f8db3;
+  text-decoration: none;
+}
+.mainmenu > ul > li.active > a,
+.mainmenu .mainmenu-submenu-inner > li.active > a {
+  color: #009688;
+  font-weight: 600 !important;
+}
+.mainmenu > ul > li.mainmenu-open a,
+.mainmenu .mainmenu-submenu-inner > li.mainmenu-open a,
+.mainmenu > ul li.mainmenu-open > a:hover,
+.mainmenu .mainmenu-submenu-inner li.mainmenu-open > a:hover {
+  color: #fff;
+  background: #268698;
+}
+.mainmenu .mainmenu-submenu {
+  display: none;
+  position: absolute;
+  background: #4f8db3;
+  width: 100%;
+  left: 0;
+  z-index: 999;
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-box-shadow: 0 5px 5px rgba(0,0,0,0.4);
+  -moz-box-shadow: 0 5px 5px rgba(0,0,0,0.4);
+  box-shadow: 0 5px 5px rgba(0,0,0,0.4);
+  color: 0 5px 5px rgba(0,0,0,0.4);
+}
+.mainmenu .mainmenu-submenu-inner > div {
+  width: 33%;
+  float: left;
+}
+.mainmenu .mainmenu-submenu-inner:before,
+.mainmenu .mainmenu-submenu-inner:after {
+  content: " ";
+  display: table;
+}
+.mainmenu .mainmenu-submenu-inner:after {
+  clear: both;
+}
+.mainmenu .mainmenu-submenu-inner > div a {
+  line-height: 2em;
+}
+.mainmenu-open .mainmenu-submenu {
+  display: block;
+  padding-bottom: 3em;
+}
+.mainmenu-submenu h4 {
+  color: #bad2e1;
+  padding: 1em 0 0.6em;
+  margin-left: 20px;
+  font-size: 160%;
+  font-weight: 300;
+}
+.mainmenu-submenu ul {
+  margin-left: 20px;
+}
+@media screen and (max-width: 979px) {
+  .mainmenu {
+    font-size: 0.8em;
+  }
+  .mainmenu-submenu {
+    font-size: 1.2em;
+  }
+  .mainmenu-submenu li,
+  .mainmenu-submenu h4 {
+    padding-left: 10px;
+  }
+}
+@media screen and (max-width: 479px) {
+  .mainmenu {
+    font-size: 120%;
+    border: none;
+  }
+  .mainmenu > ul,
+  .mainmenu .mainmenu-submenu-inner {
+    width: 100%;
+    padding: 0;
+  }
+  .mainmenu .mainmenu-submenu-inner {
+    padding: 0 1.5em;
+    font-size: 75%;
+  }
+  .mainmenu > ul > li {
+    display: block;
+    border-bottom: 4px solid #4f8db3;
+  }
+  .mainmenu > ul > li > a {
+    display: block;
+    padding: 1em 3em;
+  }
+  .mainmenu > ul > li:last-child {
+    border: none;
+  }
+  .mainmenu .mainmenu-submenu {
+    position: relative;
+  }
+  .mainmenu-submenu h4 {
+    padding-top: 0.6em;
+  }
+  .mainmenu .mainmenu-submenu-inner > div {
+    width: 100%;
+    float: none;
+    padding: 0;
+  }
+}
+
+
+/*--------------------------------------------------------------------------
++	Breadcrumbs Section Style
+--------------------------------------------------------------------------*/
+.section-breadcrumbs {
+  background: #222;
+  background: rgba(34, 34, 34, 0.8);
+  margin-bottom: 10px;
+}
+.section-breadcrumbs h1 {
+  color: #FAFAFA;
+  font-size: 1.6em;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-transform: none;
+}
+
+.section {
+    padding: 20px 0px;
+    transform: translateZ(0px);
+}
+
+
+/*--------------------------------------------------------------------------
++ Registration
+--------------------------------------------------------------------------*/
+.bold_text 
+{
+    font-weight: bold;
+}
+
+.fb_tw_go_box
+{
+  margin-top: 100px;
+}
+
+.fb_tw_go_btns
+{
+margin-left: 60px;
+}
+
+.sub-reset-btn
+{
+  margin-left: 400px;
+}
+
+.selectdemoBasicUsage .demo-content
+ {
+  min-height: 348px; 
+}
+/*--------------------------------------------------------------------------
++	Extras Menu (Cart, Language, Login) Style
+--------------------------------------------------------------------------*/
+
+.menuextras {
+  font-size: 0.85em;
+  height: 30px;
+}
+.menuextras ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  float: right;
+  padding: 3px 0;
+}
+.menuextras li {
+  float: left;
+  padding: 0 8px;
+}
+.menuextras .extras li {
+  padding: 0 8px;
+}
+.menuextras .extras li a {
+  color: #333;
+}
+.menuextras .extras li a:hover {
+  color: #333;
+  text-decoration: none;
+}
+.menuextras .extras .shopping-cart-items i {
+  color: #333;
+}
+.menuextras .choose-country .dropdown-menu {
+  background-color: #222;
+  background-color: rgba(34, 34, 34, 0.8);
+  margin-top: 5px;
+}
+.menuextras .choose-country .dropdown-menu li {
+  float: none;
+}
+.menuextras .choose-country .dropdown-menu li a {
+  color: #fff;
+  padding-left: 3px;
+}
+.menuextras .choose-country .dropdown-menu li a:hover {
+  color: #fff;
+  background-color: #333 !important;
+}
+
+.bg_image
+{
+background: url("pattern2.png");
+background-attachment: fixed;
+}
+
+.logo
+{
+height: 90px;
+width:250px;
+}
+
+
+.bg_div
+{
+	height:450px;
+	width:-900px;
+	background-color:#fff;
+	border-radius:15px;
+	margin-top: 70px;
+	margin-left: 30PX;
+margin-right: 30PX;
+background-attachment: local;
+
+}
+
+.left_side_img
+{
+position:absolute;
+height:400px;
+width:725px;
+margin-top:25px;
+float:right;
+margin-left: 35px;
+background-color:#e9e9e9;
+}
+
+.demo
+{
+height:400px;
+width:400px;
+margin-right:35px;
+margin-top: 25px;
+float:right;
+background-color:#e9e9e9;
+color:black;
+}
+
+.get_started_box
+{
+text-align: center;
+background-color:#009688;
+vertical-align: middle;
+border-radius: 5px;
+height:45px;
+margin-top: 10px;
+color: #fff;
+font-size: 16px;
+font-family: "Proxima Nova",sans-serif;
+}
+
+.home_types_title_box
+{
+text-align: center;
+vertical-align: middle;
+background-color:#b0bdc2;
+border-radius: 5px;
+height:45px;
+margin-top:-5px;
+color: #fff;
+font-size: 13px;
+font-family: "Proxima Nova",sans-serif;
+}
+
+.titles
+{
+	padding: 10px;
+	margin-top: -17px;
+}
+
+.titles_home_types
+{
+	padding: 10px;
+	margin-top: -12px;
+}
+
+.house_types
+{
+height:250px;
+width:300px;
+margin-top:20px;
+margin-left:12px;
+font-size: 16px;
+font-family: "Proxima Nova",sans-serif;
+font-weight: 575;
+}
+
+.footer_links
+{
+color:white; 
+font-size:14px; 
+margin-top:20px; 
+margin-left:10px;
+width: 45%;
+}
+
+footer
+{
+position:absolute;
+margin-top:50px;
+width:100%;
+height:200px;
+background:#ec6952;
+}
+
+.copyright
+{
+margin-top:-30px; 
+margin-left:300px;
+width: 50%;
+}
+
+.footer_info
+{
+	color:white;
+	font-size: 12px;
+	text-align: center;
+}
+/*****************************************************************
+  class for the ng-message with animation
+*******************************************************************/
+.ng-messages{
+  position: inherit;
+}
+
+
+
+
+

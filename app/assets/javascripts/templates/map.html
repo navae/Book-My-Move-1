@@ -1,0 +1,41 @@
+<div class="row" ng-init="mapService.initialize()">
+    <div class="bg_div">
+        <div class="col-md-5">
+            <md-content md-theme="docs-dark" class="md-padding" layout-sm="column" style="font-size:1.0em">
+                <md-input-container class="md-docs-dark-theme">
+                    <label>from:</label>
+                    <input type="text" options="options2" ng-model="mapService.initial_loc" ng-autocomplete="mapService.initial_loc" ng-mouseenter="mapService.calcRoute()" ng-change="mapService.calcRoute()" Required/>
+                </md-input-container>
+                
+                <md-input-container>
+                    <label>to:</label>
+                    <input type="text" options="options2" ng-model="mapService.end_loc" ng-autocomplete="mapService.end_loc" ng-mouseenter="mapService.calcRoute()" ng-change="mapService.calcRoute()" required/>
+                </md-input-container>
+                <md-input-container>
+                    <div class="col-lg-1"><label>Date:</label>
+                    <input pickadate ng-model="date" Required/></div>
+                </md-input-container>
+                <b>can a moving truck park outside your house?</b><section layout="row"><span><md-checkbox class="md-primary">yes</md-checkbox></span><md-checkbox class="md-primary">no</md-checkbox><md-checkbox class="md-primary">don't know</md-checkbox></section>
+            </md-content>    
+        </div>
+        <div class="col-md-2">
+            <md-content md-theme="docs-dark" class="md-padding" layout-sm="column" style="font-size:1.1em">
+                <md-input-container>
+                    <label>zipcode:</label>
+                    <input placeholder="zip-code" ng-model="zipfrom" maxlength="6" minlength="6" Required/>
+                </md-input-container>
+                <md-input-container>
+                    <label>zipcode:</label>
+                    <input type="text" placeholder="zip-code" ng-model="zip" maxlength="6" minlength="6" Required/>
+                </md-input-container>
+
+            </md-content>
+        </div>
+        <div class="col-md-5">
+            <div id="map-canvas"></div>
+            {{mapService.calcRoute().distance}}
+            Total Distance:<b ng-cloak> {{mapService.distance}}</b>
+        </div>
+    </div>
+    <div pickadate default-date>
+</div>

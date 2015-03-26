@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html ng-app="bookmymove">
+  <head>
+  	
+    <title>Book My Move</title>
+    <script src='//maps.googleapis.com/maps/api/js?sensor=false&libraries=places'></script>
+  </head>
+  	<body class='bg_image'>
+	
+	<!-- navigation bar -->
+	<div class="mainmenu-wrapper">
+		 <div class="container">
+		 	<div class="menuextras">
+		 		<div class="extras">
+		 			<ul>
+						<li>
+							<div class="dropdown choose-country">
+								<a class="#" data-toggle="dropdown" href="#"><img src="assets/in.png" alt="Great Britain"> UK</a>
+									<ul class="dropdown-menu" role="menu">
+										<li role="menuitem"><a href="#"><img src="img/flags/us.png" alt="United States"> US</a></li>
+										<li role="menuitem"><a href="#"><img src="img/flags/de.png" alt="Germany"> DE</a></li>
+										<li role="menuitem"><a href="#"><img src="img/flags/es.png" alt="Spain"> ES</a></li>
+									</ul>
+								</div><!--dropdown choose-country-->
+							</li>
+			        		<li><a href="page-login.html">Login</a></li>
+			        	</ul>
+					</div><!--extras-->
+					 </div><!--menuextras-->
+					   <nav id="mainmenu" class="mainmenu">
+					<ul>
+						<li class="logo-wrapper"><a href="index.html"><img src="/assets/B2M1.png" class="logo"></a></li>
+						<li class="active">
+							<a href="index.html">Home</a>
+						</li>
+						<li>
+							<a href="features.html">About Us</a>
+						</li>
+						<li class="has-submenu">
+							<a href="#">Contact Us</a>
+						</li>
+						<li>
+							<a href="features.html">Services</a>
+						</li>
+					<li>
+							<a href="features.html">Discuss</a>
+						</li>
+						<li>
+							<a href="features.html">Help</a>
+						</li>
+          
+          </div><!--.mainmenu-wrapper -->
+     </div><!-- container -->
+
+
+
+</div><!-- top-most div -->
+
+<!-- ng-view injected at this place -->
+
+	<div ng-view></div>
+	<footer>
+		<div class='container'>
+			<ul class="footer_links ">
+				About Us | Contact Us | About Us | Contact Us |About Us | Contact Us 
+			</ul>
+
+		<ul align='right' style="margin-left:950px; width: 15%;">
+		<i class="fa fa-facebook-square fa-2x" style="color:white; font-size:35px; margin-top:-30px; margin-left:10px; "></i>
+		<i class="fa fa-google-plus-square fa-2x" style="color:white; font-size:35px; margin-top:-30px; margin-left:10px; "></i>
+		<i class="fa fa-twitter-square fa-2x" style="color:white; font-size:35px; margin-top:-30px; margin-left:10px; "></i>
+		</ul>
+
+
+		<div class='copyright'>
+			<p class='footer_info'>
+				boyomo is an FMCSA registered household goods transportation broker<br> 
+				we are not a moving company, but act as an intermediary service to connect customers with movers<br>
+				MC #843756 • US DOT #2479199<br>
+				© 2014 boyomo, LLC. USA. all rights reserved<br>
+		</p>
+		</div>
+		</div>
+
+		
+	</footer> 
+  </body>
+</html>

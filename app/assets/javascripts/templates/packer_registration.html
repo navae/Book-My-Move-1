@@ -1,0 +1,137 @@
+<!--+ Header(BreadCrumbs)-->
+<div class="section section-breadcrumbs">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1>Please Register To BOOK YOUR MOVE</h1>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- + Registration Form -->
+  <div class="row">
+
+  <!-- + Background Div -->
+    <div class="bg_div">
+
+      <!-- + Registration Form Heading -->
+      <md-toolbar md-theme="docs-dark">
+        <h1 class="md-toolbar-tools">Registration Form</h1>
+      </md-toolbar><!-- + End Of Registration Form heading -->   
+
+
+<div class="col-md-8"><!-- Sepration Div(Registration Form) -->
+<div layout="column">
+  <md-content md-theme="docs-dark" class="md-padding" layout="row" layout-sm="column" style="font-size:1.1em">
+      <form name="userForm">
+
+  <div layout layout-sm="column">
+    <md-input-container>
+      <label>First Name</label>
+      <input ng-model="user.title">
+    </md-input-container>
+    <md-input-container>
+      <label>Last Name</label>
+      <input ng-model="user.email" type="email">
+    </md-input-container>
+</div>
+
+      <div layout layout-sm="column">
+        <md-input-container flex>
+          <label>Email Id</label>
+          <input ng-model="user.firstName" placeholder="Placeholder text">
+        </md-input-container>
+        <md-input-container flex>
+          <label>Mobile No.</label>
+          <input ng-model="theMax">
+        </md-input-container>
+      </div>
+           <div layout layout-sm="column">
+        
+          <md-select placeholder="City" ng-model="someval">
+                  <md-option value="2" ng-selected="selected">select</md-option>
+                    <md-option ng-value="city.name" ng-repeat="city in cities">{{city.name}}
+                  </md-option>
+                </md-select>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  
+        <md-select placeholder="State" ng-model="someval" md-theme="docs-dark" style="width:170px;" class="selectdemoBasicUsage demo-content">
+              <md-option value="2" ng-selected="selected">select</md-option>
+              <md-option ng-value="state.name" ng-repeat="state in states">{{state.name}}</md-option>
+          </md-select>  
+
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+          <md-input-container flex>
+          <label>Pincode</label>
+          <input ng-model="user.postalCode">
+        </md-input-container>
+      </div>
+
+ <div layout layout-sm="column">
+
+<md-input-container flex>
+        <label>Username</label>
+        <input ng-model="user.address">
+      </md-input-container>
+ 
+
+      <md-input-container flex>
+        <label>Password</label>
+        <input ng-model="user.biography">
+      </md-input-container>
+
+      <md-input-container flex>
+        <label>Confirm Password</label>
+        <input ng-model="user.biography">
+      </md-input-container>
+</div>
+    </form>
+  </md-content>
+</div>
+<div layout layout-sm="column" class="sub-reset-btn">
+      <md-button class="md-raised md-warn">Submit</md-button>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <md-button class="md-raised md-warn">Reset</md-button>
+    </div>
+</div>
+
+
+
+
+
+  <!-- Second Sepration Div(Login Form) -->
+  <div class="col-md-4 fb_tw_go_box">
+
+  <md-card>
+  <md-card-content>
+  <p class='bold_text'>Sign in with :</p>
+  <div class="fb_tw_go_btns">
+  <section layout="row">
+      <img src="assets/Button-login-with-facebook.png" width="200px">
+      
+    </section>
+    <br>
+
+    <section layout="row">
+       <img src="assets/sign-in-button.png" height='40px' width="200px">
+      
+    </section>
+    <br>
+    <section layout="row">
+     <img src="assets/u_twitter_login_button.png" width='200px' height='40px'>
+    </section>
+    <div>
+    </md-card>
+    </md-card-content>
+    </div><!-- +End Of Second Sepration Div(Login Form) -->
+  </div><!-- +End Of Background Div -->
+  </div><!-- +End Of Main Div(row) -->
+  <script type="text/ng-template" id="my-messages">
+  <div ng-message="required">This is required field<i style="margin-left:130px;" class="fa fa-exclamation fa-stack-1x"></i></div>
+  <div ng-message="minlength">First Name is too short</div>
+  <div ng-message="pattern">Only characters & alphabets</div>
+  </script>
+
+

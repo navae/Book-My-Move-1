@@ -1,0 +1,168 @@
+<!--+ Header(BreadCrumbs)-->
+<div class="section section-breadcrumbs">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1>Please Register To BOOK YOUR MOVE</h1>
+      </div>
+    </div>
+  </div>
+</div>
+  <!-- + Registration Form -->
+  <div class="row">
+  <!-- + Background Div -->
+    <div class="bg_div">
+
+      <!-- + Registration Form Heading -->
+      <md-toolbar md-theme="docs-dark">
+        <h1 class="md-toolbar-tools">Registration Form</h1>
+      </md-toolbar><!-- + End Of Registration Form heading -->   
+
+ 
+      
+      <div class="col-md-8"><!-- Sepration Div(Registration Form) -->
+        <md-card>
+          <md-card-content md-theme="docs-dark">
+
+            
+              <md-content md-theme="docs-dark" class="md-padding" layout="row" layout-sm="column" style="font-size:1.1em">
+
+                <form name="ClientForm">
+                  <div layout layout-sm="column">
+                    <md-input-container>
+                      <label>First Name*<i ng-show="ClientForm.fname.$valid && !ClientForm.fname.$pristine" style="margin-left:75px;" class="fa fa-check-circle fa-stack-1x"></i></label>
+                      <input input="text" name="fname" ng-model="firstname" placeholder="Enter FirstName" ng-model-options="modelOptions" ng-required="true" minlength="3" ng-pattern="/^[a-zA-Z]{3,20}$/">
+                      <div ng-show="!ClientForm.fname.$pristine" ng-messages="ClientForm.fname.$error" ng-messages-include="my-messages"></div>
+                    </md-input-container>
+
+                    
+                <md-input-container>
+                  <label>Last Name*</label>
+                  <input input="text" name="juned" ng-model="lastName" placehol ng-required="true" minlength="3" ng-pattern="/^[a-zA-Z]{3,20}$/">
+                  <div ng-messages="ClientForm.juned.$error">
+                    <div ng-message="required">This is required field<i style="margin-left:130px;" class="fa fa-exclamation fa-stack-1x"></i>
+                      <div ng-message="minlength">First Name is too short</div>
+                  </div>
+                </div> 
+               </md-input-container>
+
+                  </div>
+
+                <md-input-container>
+                  <label>Email_Id*</label>
+                  <input type="email" required name="emailid" ng-model="emailid" validate-email />
+                  <div  ng-show="!ClientForm.emailid.$pristine" ng-messages="ClientForm.emailid.$error" ng-messages-include="my-messages">
+                    <div ng-message="email">Specify a valid email</div>
+                  </div>
+                </md-input-container>
+
+                <md-input-container>
+                  <label>Pincode:</label>
+                  <input type="text" name="pincode" ng-model="pincode" ui-mask="{{pattern_pin}}" Required/>
+                </md-input-container>
+
+                <md-select placeholder="City" ng-model="someval">
+                  <md-option value="2" ng-selected="selected">select</md-option>
+                    <md-option ng-value="city.name" ng-repeat="city in cities">{{city.name}}
+                  </md-option>
+                </md-select><br> <br> 
+
+                <md-input-container>
+                  <label>Password:</label>
+                  <input type="text" placeholder="zip-code" ng-model="zipto" Required/>
+                </md-input-container>
+
+                <md-content md-theme="docs-dark" >
+                  <section layout="row" class="submit_reset_btns">
+                    <md-button class=" md-raised md-primary">Submit<span><i style="margin-left:28px;" class="fa fa-paper-plane fa-stack-1x"></i></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</md-button>
+                  </section>
+                </md-content>
+           
+          
+
+            <div class="col-md-4">
+              
+                <md-input-container>
+                    <label>Mobile No:</label>
+                    <input type="text" name='mobilefield' ng-model="mobile_no"  Required ui-mask="{{mobilenum}}"/>
+                </md-input-container>  
+
+        
+
+          <md-select placeholder="State" ng-model="someval" md-theme="docs-dark">
+              <md-option value="2" ng-selected="selected">select</md-option>
+              <md-option ng-value="state.name" ng-repeat="state in states">{{state.name}}</md-option>
+          </md-select>           
+
+
+          <br> <br>    
+
+                <md-input-container>
+                    <label>Username:</label>
+                    <input type="text" placeholder="" ng-model="zipto" Required/>
+                </md-input-container>
+
+                 <md-input-container>
+                    <label>Confirm Password:</label>
+                    <input type="text" placeholder="zip-code" ng-model="zipto" Required/>
+                </md-input-container>
+              
+  <md-input-container ng-hide="true">
+                    <label>User Type:</label>
+                    <input type="text" ng-disabled="" placeholder="" ng-model="user_type" Required/>
+                </md-input-container>
+                
+
+            <md-content md-theme="docs-dark" >
+    <section layout="row">
+      
+      <md-button class="md-raised md-warn">Warn</md-button>
+    </section>
+
+</md-content>
+</form>
+ </div><!-- +End Of First Column Of Registration Form -->
+    </div><!-- End Of Second Column Of Registration Form -->
+  
+
+
+
+  
+  </md-card>
+  </md-card-content> 
+  </div><!-- End Of Sepration Div -->
+  <!-- Second Sepration Div(Login Form) -->
+  <div class="col-md-4 fb_tw_go_box">
+
+  <md-card>
+  <md-card-content>
+  <p class='bold_text'>Sign in with :</p>
+  <div class="fb_tw_go_btns">
+  <section layout="row">
+      <img src="assets/Button-login-with-facebook.png" width="200px">
+      
+    </section>
+    <br>
+
+    <section layout="row">
+       <img src="assets/sign-in-button.png" height='40px' width="200px">
+      
+    </section>
+    <br>
+    <section layout="row">
+     <img src="assets/u_twitter_login_button.png" width='200px' height='40px'>
+      
+    </section>
+    <div>
+    </md-card>
+    </md-card-content>
+    </div><!-- +End Of Second Sepration Div(Login Form) -->
+  </div><!-- +End Of Background Div -->
+  </div><!-- +End Of Main Div(row) -->
+  <script type="text/ng-template" id="my-messages">
+  <div ng-message="required">This is required field<i style="margin-left:130px;" class="fa fa-exclamation fa-stack-1x"></i></div>
+  <div ng-message="minlength">First Name is too short</div>
+  <div ng-message="pattern">Only characters & alphabets</div>
+  </script>
+
+

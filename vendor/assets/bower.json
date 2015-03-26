@@ -1,0 +1,15 @@
+{
+  "name": "dsl-generated dependencies",
+  "dependencies": {
+    "bootstrap": "latest",
+    "angular": "latest",
+    "angular-route": "latest",
+    "angular-material": "latest",
+    "angular-ui-date": "latest",
+    "angular-ui-map": "latest",
+    "angular-ui-bootstrap": "latest",
+    "angular-pickadate": "latest",
+    "angular-messages": "latest",
+    "angular-resource": "latest"
+  }
+}
