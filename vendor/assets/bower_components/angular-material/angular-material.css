@@ -15,7 +15,6 @@
   outline: none; }
 
 
-
 .selectdemoBasicUsage p {
   padding: 0 20px;
   text-align: center; }
@@ -23,7 +22,7 @@
   font-size: 0.8em;
   color: #777; }
 .selectdemoBasicUsage .demo-content {
-  height: 410px; }
+  min-height: 348px; }
 
 
 
@@ -5535,16 +5534,17 @@ md-radio-group {
     display: table;
     margin: 24px auto !important; }
   .md-select-menu-container.md-active {
-    opacity: 1; }
+    opacity: 1;
+    border-color: #009688; }
     .md-select-menu-container.md-active md-select-menu {
       transition: -webkit-transform all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
       transition: transform all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
-      transition-duration: 200ms; }
+      transition-duration: 200ms;border-color: #009688; }
       .md-select-menu-container.md-active md-select-menu > * {
         opacity: 1;
         transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2);
         transition-duration: 200ms;
-        transition-delay: 100ms; }
+        transition-delay: 100ms;border-color: #009688; }
   .md-select-menu-container.md-leave {
     opacity: 0;
     transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2);
@@ -5581,7 +5581,7 @@ md-select {
         -ms-flex-align: end;
             align-items: flex-end;
     text-align: end;
-    width: 24px;
+    width: 60px;
     margin: 0 4px; }
   .md-select-label .md-select-icon:after {
     display: block;
@@ -6574,7 +6574,6 @@ md-input-container.md-docs-dark-theme .md-input:valid {
 .inputdemoErrors .inputErrorsApp {
   min-height: 48px;
 }
-
 
 
 

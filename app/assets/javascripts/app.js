@@ -23,13 +23,8 @@ bookmymove.config(['$routeProvider', '$mdThemingProvider', function($routeProvid
         controller: 'MapCtrl'
     })
     .when('/registration',{
-      templateUrl: 'registration.html',
-      controller: 'RegistrationCtrl'
-    })
-        .when('/packer_registration',{
       templateUrl: 'packer_registration.html',
-      controller: 'PackerRegistrationCtrl'
-
+      controller: 'RegistrationCtrl'
     })
 
     $mdThemingProvider.theme('docs-dark', 'default')
@@ -49,7 +44,6 @@ bookmymove.service('mapService',['$rootScope', function($rootScope) {
     this.distance = 'hello';
     var km = '';
     this.initialize = function () {
-      // ;
       console.log('init');
       window.directionsDisplay = new google.maps.DirectionsRenderer();
       //var chicago = new google.maps.LatLng(39.50, -87.6500523);
@@ -139,10 +133,6 @@ bookmymove.controller('indexCtrl', ['$scope', function($scope){
 
 }]);
 
-bookmymove.controller('PackerRegistrationCtrl', ['$scope', function($scope){
-
-}]);
-
 bookmymove.controller('MapCtrl', ['$scope','mapService', function($scope,mapService){
   $scope.result2 = '';
   $scope.options2 = {
@@ -172,12 +162,9 @@ $scope.pattern_mob = '999-999-9999';
 $scope.mobile_no = '';
 $scope.pincode = '';
 $scope.pattern_pin = '999-999';
-$scope.modelOptions= {
-  updateOn: 'default',
-  debounce:{
-    default: 500
-  } 
-}
+$scope.password = '';
+$scope.confirmpassword = '';
+
 $scope.cities = [
     { name: 'Pune'},
     { name: 'Ahmednagar'},
@@ -216,7 +203,7 @@ $scope.cities = [
     { name: 'Rajasthan' },
     { name: 'Sikkim' },
     { name: 'Tamil Nadu' },
-    { name: 'Telangana (from June 2, 2014)' },
+    { name: 'Telangana' },
     { name: 'Tripura' },
     { name: 'Uttar Pradesh' },
     { name: 'Uttarakhand' },
@@ -246,6 +233,7 @@ $scope.cities = [
   ];
 }]);
 
+//directive
 bookmymove.directive('validateEmail', function() {
   var EMAIL_REGEXP = /^[_a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$/;
 
@@ -264,3 +252,23 @@ bookmymove.directive('validateEmail', function() {
     }
   };
 });
+var compareTo = function() {
+    return {
+        require: "ngModel",
+        scope: {
+            otherModelValue: "=compareTo"
+        },
+        link: function(scope, element, attributes, ngModel) {
+             
+            ngModel.$validators.compareTo = function(modelValue) {
+                return modelValue == scope.otherModelValue;
+            };
+ 
+            scope.$watch("otherModelValue", function() {
+                ngModel.$validate();
+            });
+        }
+    };
+};
+ 
+bookmymove.directive("compareTo", compareTo);

@@ -6563,4 +6563,20 @@ button.close {
     display: none !important;
   }
 }
+/*[ng-view].ng-enter, [ng-view].ng-leave {
+  position: absolute;;
+  left: 0;
+  right: 0;
+  -webkit-transition:all .5s ease-in-out;
+  tranition:all .5s wace-in.out;
+}
 /*# sourceMappingURL=bootstrap.css.map */
+[ng-view].ngenter {
+  opacity: 0;
+}
+[ng-view-view].ng-enter {
+  opacity: 0;
+}
+[ng-view].ng-enter-active{
+  opacity: 3px;
+}
