@@ -24,4 +24,7 @@
 //= require angular-ui-utils/ui-utils
 //= require angular-pickadate/dist/angular-pickadate.js
 //= require angular-messages/angular-messages
+//= require angular-ui-select/dist/select.js
+//= require angular-ui-router
 //= require_tree .
+

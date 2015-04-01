@@ -10,23 +10,27 @@ var bookmymove = angular.module('bookmymove',[
   'ui.map',
   'pickadate',
   'ngMessages',
-  'ui.mask'
+  'ui.mask',
+  'ui.router',
+  'ui.select'
 	]);
-bookmymove.config(['$routeProvider', '$mdThemingProvider', function($routeProvider,$mdThemingProvider){
-	$routeProvider
-	.when('/',{
-		templateUrl: 'index.html',
-		controller: 'indexCtrl'
-	})
-    .when('/map', {
-        templateUrl: 'map.html',
-        controller: 'MapCtrl'
-    })
-    .when('/registration',{
+bookmymove.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', '$mdThemingProvider', function($stateProvider, $urlRouterProvider, $locationProvider,$mdThemingProvider){
+	$stateProvider.state('home',{
+      url: '/',
+		  templateUrl: 'index.html',
+		  controller: 'indexCtrl'
+	  }).state('map',{
+      url: '/map',
+      templateUrl: 'map.html',
+      controller: 'MapCtrl'
+    }).state('registration',{
+      url: '/registration',
       templateUrl: 'packer_registration.html',
       controller: 'RegistrationCtrl'
     })
-
+  ;
+  $urlRouterProvider.otherwise('/');
+  //$locationProvider.html5Mode(true);
     $mdThemingProvider.theme('docs-dark', 'default')
         .primaryPalette('teal');
         $mdThemingProvider.theme('docs-darks', 'default')
@@ -130,7 +134,7 @@ bookmymove.service('mapService',['$rootScope', function($rootScope) {
 
 //Controllers
 bookmymove.controller('indexCtrl', ['$scope', function($scope){
-
+console.log('juned');
 }]);
 
 bookmymove.controller('MapCtrl', ['$scope','mapService', function($scope,mapService){
@@ -164,6 +168,7 @@ $scope.pincode = '';
 $scope.pattern_pin = '999-999';
 $scope.password = '';
 $scope.confirmpassword = '';
+$scope.state = {};
 
 $scope.cities = [
     { name: 'Pune'},
@@ -184,6 +189,7 @@ $scope.cities = [
     { name: 'Assam' },
     { name: 'Bihar' },
     { name: 'Chhattisgarh' },
+    { name: 'Delhi'},
     { name: 'Goa' },
     { name: 'Gujarat' },
     { name: 'Haryana' },

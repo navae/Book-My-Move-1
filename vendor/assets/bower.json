@@ -10,6 +10,8 @@
     "angular-ui-bootstrap": "latest",
     "angular-pickadate": "latest",
     "angular-messages": "latest",
-    "angular-resource": "latest"
+    "angular-resource": "latest",
+    "angular-ui-router": "latest",
+    "angular-ui-select": "latest"
   }
 }

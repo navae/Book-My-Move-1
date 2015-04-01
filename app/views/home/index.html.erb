@@ -24,6 +24,7 @@
 								</div><!--dropdown choose-country-->
 							</li>
 			        		<li><a href="page-login.html">Login</a></li>
+			        		<li><a ui-sref="registration">sign Up</a></li>
 			        	</ul>
 					</div><!--extras-->
 					 </div><!--menuextras-->
@@ -31,7 +32,7 @@
 					<ul>
 						<li class="logo-wrapper"><a href="index.html"><img src="/assets/B2M1.png" class="logo"></a></li>
 						<li class="active">
-							<a href="index.html">Home</a>
+							<a ui-sref="home">Home</a>
 						</li>
 						<li>
 							<a href="features.html">About Us</a>
@@ -58,7 +59,7 @@
 
 <!-- ng-view injected at this place -->
 
-	<div ng-view></div>
+	<div class="main-view-container" ui-view></div>
 	<footer>
 		<div class='container'>
 			<ul class="footer_links ">

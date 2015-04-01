@@ -49,10 +49,7 @@
             </div>
             <div layout layout-sm="column">
               
-              <md-select ng-required="true" placeholder="Select State" ng-model="someval" md-theme="docs-dark" class="selectdemoBasicUsage demo-content">
-                <md-option value="2" ng-selected="selected">select</md-option>
-                <md-option ng-value="state.name" ng-repeat="state in states">{{state.name}}</md-option>
-              </md-select>
+              
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
               <md-select placeholder="City" ng-model="someval">
                 <md-option value="2" ng-selected="selected">select</md-option>
@@ -77,12 +74,12 @@
               <md-input-container flex>
                 <label>Password*</label>
                 <input type="password" ng-model="password" name="password" minlength="6" minlength="18" required/>
-                <div ng-show="!ClientForm.password.$pristine" ng-messages="ClientForm.password.$error" ng-messages-include="my-messages.html"></div>
+                <div ng-show="!ClientForm.password.$pristine" ng-messages="ClientForm.password.$error" ng-model-options="{debounce: 750}" ng-messages-include="my-messages.html"></div>
               </md-input-container>
 
               <md-input-container flex>
                 <label>Confirm Password*<i ng-show="ClientForm.confirmpassword.$valid && !ClientForm.confirmpassword.$pristine" class="fa fa-check fa-stack-1x"></i></label>
-                <input type="password" ng-model="confirmpassword" name="confirmpassword" required compare-to="password"/>
+                <input type="password" ng-model="confirmpassword" name="confirmpassword" required compare-to="password"  ng-model-options="{debounce: 750}"/>
                 <div ng-show="!ClientForm.confirmpassword.$pristine" ng-messages="ClientForm.confirmpassword.$error" ng-messages-include="my-messages.html"></div>
               </md-input-container>
             </div>
@@ -120,3 +117,11 @@
 
 
 
+<ui-select ng-model="state.selected" theme="bootstrap">
+                <ui-select-match placeholder="Select state...">
+                {{$select.selected.name}}
+                </ui-select-match>
+                <ui-select-choices repeat="state in states | filter: $select.search">
+                {{state.name}}
+                </ui-select-choices>
+              </ui-select>
