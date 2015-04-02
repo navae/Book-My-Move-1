@@ -27,6 +27,10 @@ bookmymove.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', 
       url: '/registration',
       templateUrl: 'packer_registration.html',
       controller: 'RegistrationCtrl'
+    }).state('feedback', {
+      url: '/feedback',
+      templateUrl: 'feedback.html',
+      controller: 'feedbackCtrl'
     })
   ;
   $urlRouterProvider.otherwise('/');
@@ -237,6 +241,32 @@ $scope.cities = [
     { name: 'Nasikh' },
     { name: 'Lonvala' },
   ];
+}]);
+
+bookmymove.controller('feedbackCtrl', ['$scope', function($scope){
+  $scope.ratings = [
+    { rating: 'Very Difficult' },
+    { rating: 'A Bit Difficult' },
+    { rating: 'Netural'},
+    { rating: 'Easy' },
+    { rating: 'Very Easy'},
+  ];
+  $scope.ratings1 = [
+    { rating: 'Terrible' },
+    { rating: 'Bad' },
+    { rating: 'Netural'},
+    { rating: 'Good' },
+    { rating: 'Great'},
+  ];
+  $scope.ratings2 = [
+    { rating: 'Never' },
+    { rating: 'Unlikely' },
+    { rating: 'Maybe'},
+    { rating: 'Probably' },
+    { rating: 'Definitely'},
+  ];
+  $scope.group1 ='Easy';
+  $scope.group2 ='';
 }]);
 
 //directive

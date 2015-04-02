@@ -390,14 +390,5 @@ width: 50%;
 	font-size: 12px;
 	text-align: center;
 }
-/*****************************************************************
-  class for the ng-message with animation
-*******************************************************************/
-.ng-messages{
-  position: inherit;
-}
-
-
-
 
 
