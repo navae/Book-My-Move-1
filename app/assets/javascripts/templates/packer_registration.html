@@ -8,120 +8,148 @@
     </div>
   </div>
 </div>
-<!-- + Registration Form -->
-<div class="row">
-  <!-- + Background Div -->
-  <div class="bg_div">
-    <!-- + Registration Form Heading -->
-    <md-toolbar md-theme="docs-dark">
-      <h1 class="md-toolbar-tools">Registration Form</h1>
-    </md-toolbar><!-- + End Of Registration Form heading -->   
-    <div class="col-md-8"><!-- Sepration Div(Registration Form) -->
-      <div layout="column">
-        <md-content md-theme="docs-dark" class="md-padding" layout="row" layout-sm="column" style="font-size:1.1em">
-          <form name="ClientForm">
-            <div layout layout-sm="column">
-              <md-input-container>
-                <label>First Name*<i ng-show="ClientForm.fname.$valid && !ClientForm.fname.$pristine" class="fa fa-check fa-stack-1x"></i></label>
-                <input input="text" name="fname" ng-model="firstName" placeholder="Enter FirstName" ng-model-options="{debounce: 750}" ng-required="true" minlength="3" ng-pattern="/^[a-zA-Z]{3,20}$/">
-                <div ng-show="!ClientForm.fname.$pristine" ng-messages="ClientForm.fname.$error" ng-messages-include="my-messages.html"></div>
-              </md-input-container>
-              <md-input-container>
-                <label>Last Name*<i ng-show="ClientForm.lastname.$valid && !ClientForm.lastname.$pristine" class="fa fa-check fa-stack-1x"></i></label>
-                <input input="text" name="lastname" ng-model="lastName" placeholder="Enter LastName" ng-model-options="{debounce: 750}" ng-required="true" minlength="3" ng-pattern="/^[a-zA-Z]{3,20}$/">
-                <div ng-show="!ClientForm.lastname.$pristine" ng-messages="ClientForm.lastname.$error" ng-messages-include="my-messages.html"></div>
-              </md-input-container>
-            </div>
-            <div layout layout-sm="column">
-              <md-input-container flex>
-                <label>Email_id*<i ng-show="ClientForm.emailid.$valid && !ClientForm.emailid.$pristine" class="fa fa-check fa-stack-1x"></i></label>
-                <input type="email" required name="emailid" ng-model="emailid"  ng-model-options="{debounce: 750}" validate-email />
-                <div  ng-show="!ClientForm.emailid.$pristine" ng-messages="ClientForm.emailid.$error" ng-messages-include="my-messages.html">
-                  <div ng-message="email">Specify a valid email<i class="fa fa-exclamation-triangle fa-stack-1x"></i></div>
-                </div>
-              </md-input-container>
-              <md-input-container flex>
-                <label>Mobile No.*<i ng-show="ClientForm.mobile.$valid && !ClientForm.mobile.$pristine" class="fa fa-check fa-stack-1x"></i></label>
-                <input ng-model="mobile_no" name="mobile" ui-mask="{{pattern_mob}}" required/>
-                <div  ng-show="!ClientForm.mobile.$pristine" ng-messages="ClientForm.mobile.$error" ng-messages-include="my-messages.html">
-                </div>
-              </md-input-container>
-            </div>
-            <div layout layout-sm="column">
-              
-              
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
-              <md-select placeholder="City" ng-model="someval">
-                <md-option value="2" ng-selected="selected">select</md-option>
-                <md-option ng-value="city.name" ng-repeat="city in cities">{{city.name}}
-                </md-option>
-              </md-select>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <md-input-container flex>
-                <label>Pincode*<i ng-show="ClientForm.pincode.$valid && !ClientForm.pincode.$pristine" class="fa fa-check fa-stack-1x"></i></label>
-                <input type="text" ng-model="pincode" name="pincode" ui-mask="{{pattern_pin}}" required />
-                <div  ng-show="!ClientForm.pincode.$pristine" ng-messages="ClientForm.pincode.$error" ng-messages-include="my-messages.html">
-                </div>
-              </md-input-container>
-            </div>
 
-            <div layout layout-sm="column">
-              <md-input-container flex>
-                <label>Username</label>
-                <input ng-model="user.address">
-              </md-input-container>
+
+  <div class="row">
+
+    <div class="bg_div">
+      <!-- + Registration Form Heading -->
+  <md-toolbar md-theme="docs-dark" class="md-primary">
+    <h1 class="md-toolbar-tools">
+    Packer Registration Form
+    </h1>
+  </md-toolbar><!-- + End Of Registration Form heading -->
+<!-- + Sepration Div(Registration Form) -->
+   <div class="col-md-12 ">
+  <md-card>
+  <md-card-content>
+
+  
+  <md-content class="md-padding packerregi">
+   
+      <form name="PackerForm">
+
+  <div layout layout-sm="column">
+    <md-input-container>
+      <label>Company Name</label>
+      <input input="text" name="fname" ng-model="firstname" >      
+    </md-input-container>
+
+
+
+    <md-input-container>
+      <label>Company Address</label>
+      <input  input="text" name="comadd" ng-model="lastName">
+</md-input-container></div>
+
+<div layout layout-sm="column">
+ <md-input-container>
+      <label>Office No</label>
+      <input  input="text" name="offno" ng-model="lastName" >
+</md-input-container>
+
+
+
+    <md-input-container>
+      <label>Showpack Lisence</label>
+    </md-input-container>
+<md-radio-group ng-model="data.group1">
+<md-radio-button value="Yes">Yes</md-radio-button>
+<md-radio-button value="No">No</md-radio-button>
+</md-radio-group></div>
+
+    <div layout layout-sm="column">
+ <md-input-container>
+      <label>Lisence Photocopy <md-button class="md-raised md-warn">Browse</md-button></label>
+   
+      </md-input-container>&nbsp;&nbsp;
+
+       
+</div>
+
+    <div layout layout-sm="column">
+    <md-input-container>
+      <label>Packing Material Used</label>
+    </md-input-container>
+
+      <div class="pm_material">
+        <md-checkbox ng-model="pm.cb1" aria-label="Checkbox 1">
+    Cardbord Boxes: {{ pm.cb1 }}
+  </md-checkbox>
+
  
-              <md-input-container flex>
-                <label>Password*</label>
-                <input type="password" ng-model="password" name="password" minlength="6" minlength="18" required/>
-                <div ng-show="!ClientForm.password.$pristine" ng-messages="ClientForm.password.$error" ng-model-options="{debounce: 750}" ng-messages-include="my-messages.html"></div>
-              </md-input-container>
+ <md-checkbox ng-model="pm.cb2" aria-label="Checkbox 2">
+    Inflatable Packing Material: {{ pm.cb2 }}
+  </md-checkbox>
 
-              <md-input-container flex>
-                <label>Confirm Password*<i ng-show="ClientForm.confirmpassword.$valid && !ClientForm.confirmpassword.$pristine" class="fa fa-check fa-stack-1x"></i></label>
-                <input type="password" ng-model="confirmpassword" name="confirmpassword" required compare-to="password"  ng-model-options="{debounce: 750}"/>
-                <div ng-show="!ClientForm.confirmpassword.$pristine" ng-messages="ClientForm.confirmpassword.$error" ng-messages-include="my-messages.html"></div>
-              </md-input-container>
-            </div>
-          </form>
-        </md-content>
-      </div>
-      <div layout layout-sm="column" class="sub-reset-btn">
-        <md-button md-theme="docs-dark" class="md-raised md-primary">Submit</md-button>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <md-button md-theme="docs-dark" class="md-raised md-warn">Reset</md-button>
-      </div>
+    
+  <md-checkbox ng-model="pm.cb3" aria-label="Checkbox 3">
+    Bubble Wrapping: {{ pm.cb3 }}
+  </md-checkbox>
+
+    <md-checkbox ng-model="pm.cb4" aria-label="Checkbox 4">
+    Foam & Thermocol: {{ pm.cb4 }}
+  </md-checkbox>
+
+   
+    <md-checkbox ng-model="pm.cb5" aria-label="Checkbox 5">
+    Sacks: {{ pm.cb5 }}
+  </md-checkbox>
+</div></div>
+
+
+
+<div layout layout-sm="column">
+    <md-input-container>
+      <label>Loading & Unloading Services</label>
+    </md-input-container>
+<md-radio-group ng-model="data.group2">
+<md-radio-button value="Yes">Yes</md-radio-button>
+<md-radio-button value="No">No</md-radio-button>
+</md-radio-group>
+
+
+    <md-input-container>
+      <label>Re-arranging services</label>
+    </md-input-container>
+<md-radio-group ng-model="data.group3">
+<md-radio-button value="Yes">Yes</md-radio-button>
+<md-radio-button value="No">No</md-radio-button>
+</md-radio-group></div>
+
+ <div layout layout-sm="column">
+    <md-input-container>
+      <label>Documents To be attached: &nbsp;&nbsp;&nbsp;</label></md-input-container>
+      
+      <label>1. Pancard   <md-button class="md-raised md-warn">Browse</md-button><br>
+ </label>
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+      <label>2. Aadhar Card <md-button class="md-raised md-warn">Browse</md-button></label>
     </div>
 
-    <!-- Second Sepration Div(Login Form) -->
-    <div class="col-md-4 fb_tw_go_box">
-      <md-card>
-        <md-card-content>
-          <p class='bold_text'>Sign in with :</p>
-          <div class="fb_tw_go_btns">
-            <section layout="row">
-              <img src="assets/Button-login-with-facebook.png" width="200px">
-            </section><br>
-            <section layout="row">
-              <img src="assets/sign-in-button.png" height='40px' width="200px">
-            </section><br>
-            <section layout="row">
-              <img src="assets/u_twitter_login_button.png" width='200px' height='40px'>
-            </section>
-          </div>
-        </md-card-content>
-      </md-card>
-    </div><!-- +End Of Second Sepration Div(Login Form) -->
-  </div><!-- +End Of Background Div -->
-</div><!-- +End Of Main Div(row) -->
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+<div layout layout-sm="column" class="packerregi_sub-reset-btn">
+      <md-button class="md-raised md-warn">Submit</md-button>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <md-button class="md-raised md-warn">Reset</md-button>
+    </div>
+    
+    </form>
+  </md-content>
+</div>
+
+</div>
 
 
 
-<ui-select ng-model="state.selected" theme="bootstrap">
-                <ui-select-match placeholder="Select state...">
-                {{$select.selected.name}}
-                </ui-select-match>
-                <ui-select-choices repeat="state in states | filter: $select.search">
-                {{state.name}}
-                </ui-select-choices>
-              </ui-select>
+
+
+
+

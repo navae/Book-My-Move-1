@@ -213,6 +213,34 @@ margin-left: 60px;
  {
   min-height: 348px; 
 }
+
+.vendor_regi
+{
+  margin-left: 270px;
+}
+
+.checkbox
+{
+display: block;
+}
+
+.login
+{
+  margin-left: 200px;
+}
+
+.packerregi
+{
+  margin-left: 275px;
+}
+.pm_material
+{
+  display: block;
+}
+.packer_doc
+{
+    display: block;
+}
 /*--------------------------------------------------------------------------
 +	Extras Menu (Cart, Language, Login) Style
 --------------------------------------------------------------------------*/
